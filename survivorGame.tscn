@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://qt1r1xan2yg4"]
+
+[ext_resource type="PackedScene" uid="uid://bwjqumsqvyer8" path="res://player.tscn" id="1_t5w21"]
+[ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://trees/pine_tree.png" id="2_rtthd"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_mxb76"]
+
+[node name="Game" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -880.0
+offset_top = -585.0
+offset_right = 1040.0
+offset_bottom = 495.0
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("1_t5w21")]
+position = Vector2(12, -166)
+
+[node name="PineTree" type="Sprite2D" parent="."]
+position = Vector2(-617, 276)
+texture = ExtResource("2_rtthd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PineTree"]
+position = Vector2(1, 8)
+shape = SubResource("ConvexPolygonShape2D_mxb76")
+one_way_collision_margin = 0.0
+
+[node name="PineTree2" type="Sprite2D" parent="."]
+position = Vector2(-412, -153)
+texture = ExtResource("2_rtthd")
+
+[node name="PineTree3" type="Sprite2D" parent="."]
+position = Vector2(-110, 204)
+texture = ExtResource("2_rtthd")
+
+[node name="PineTree4" type="Sprite2D" parent="."]
+position = Vector2(-690, 56)
+texture = ExtResource("2_rtthd")
